@@ -8,7 +8,7 @@ const Hero = () => {
             <div className="hero  -mt-16">
                 <div className="hero-content text-center">
                     <div className="max-w-lg">
-                        <h1 className="text-5xl font-bold">Wellcome to <span>Byte Blaze</span></h1>
+                        <h1 className="text-5xl font-bold">Wellcome to <span className=" bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient bg-300%">Byte Blaze</span></h1>
                         <p className="py-6">Byte blaze is the bridge between the complex and curious mind to eager to understand.</p>
                         <div className="flex gap-2 justify-center">
 

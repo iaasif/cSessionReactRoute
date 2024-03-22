@@ -32,7 +32,7 @@ const Navbar = () => {
     console.log(theme);
     return (
 
-        <div className="navbar bg-base-100 px-4 shadow-lg fixed z-10 ">
+        <div className="navbar bg-base-100 px-4 sm:px-8 shadow-lg fixed z-10 ">
             <div className="flex-1">
                 <Link to='/' className="btn btn-ghost text-2xl gap-0 text-secondary normal-case">Byte<span className="text-primary">Blaze</span></Link>
             </div>
