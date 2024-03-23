@@ -16,7 +16,7 @@ const Blogs = () => {
     const blogs = useLoaderData('https://dev.to/api/articles?per_page=20&top=7')
 
 
-    console.log(blogs);
+    // console.log(blogs);
 
 
     return (
