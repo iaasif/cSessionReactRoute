@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
 import BlogCard from '../components/BlogCard';
+import Loader from '../components/Loader';
 
 const Blogs = () => {
+    const navigation = useNavigation
 
     // const [blogs, setBlogs] = useState([]);
     // useEffect(() => {
@@ -17,7 +19,7 @@ const Blogs = () => {
 
 
     // console.log(blogs);
-
+    if (navigation.state === 'loading') return <Loader></Loader>
 
     return (
         <>

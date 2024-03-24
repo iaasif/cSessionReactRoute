@@ -29,7 +29,7 @@ const Navbar = () => {
         }
     }
 
-    console.log(theme);
+    // console.log(theme);
     return (
 
         <div className="navbar bg-base-100 px-4 sm:px-8 shadow-lg fixed z-10 ">

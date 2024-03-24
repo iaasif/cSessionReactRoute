@@ -1,14 +1,18 @@
 import { useState } from 'react';
 
-import { Link, Outlet, useLoaderData } from 'react-router-dom';
+import { Link, Outlet, useLoaderData,  } from 'react-router-dom';
+import Loader from '../components/Loader';
 
 const Blog = () => {
+    
 
     const [tabIndex, setTabIndex] = useState(0);
 
     const blog = useLoaderData();
 
     const { published_at, comments_count, public_reactions_count, title, reading_time_minutes, tags } = blog;
+
+   
     return (
 
 
@@ -52,7 +56,7 @@ const Blog = () => {
                 <Outlet></Outlet>
             </article>
             <div>
-             
+
 
             </div>
         </div>
