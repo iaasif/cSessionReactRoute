@@ -1,10 +1,13 @@
 import { useState } from 'react';
 
-import { Link, Outlet, useLoaderData,  } from 'react-router-dom';
-import Loader from '../components/Loader';
+import { Link, Outlet, useLoaderData, } from 'react-router-dom';
+// import Loader from '../components/Loader';
+import { MdBookmarkAdd } from "react-icons/md";
+import { saveBlog } from '../utils';
+
 
 const Blog = () => {
-    
+
 
     const [tabIndex, setTabIndex] = useState(0);
 
@@ -12,7 +15,17 @@ const Blog = () => {
 
     const { published_at, comments_count, public_reactions_count, title, reading_time_minutes, tags } = blog;
 
-   
+    const handleBookmark = blog => {
+        // console.log(blog);
+        saveBlog(blog)
+    }
+
+
+
+
+
+
+
     return (
 
 
@@ -50,6 +63,15 @@ const Blog = () => {
                             </svg>
                             <span>Author</span>
                         </Link>
+                        <div
+                            onClick={() => handleBookmark(blog)}
+                            className='bg-primary p-3 ml-5 rounded-full hover:bg-opacity-30 bg-opacity-20 cursor-pointer
+                        hover:scale-105 overflow-hidden
+                        '>
+                            <MdBookmarkAdd size={20} className='text-secondary' />
+
+
+                        </div>
 
                     </div>
                 </div>

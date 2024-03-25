@@ -6,20 +6,14 @@ import Loader from '../components/Loader';
 const Blogs = () => {
     const navigation = useNavigation
 
-    // const [blogs, setBlogs] = useState([]);
-    // useEffect(() => {
-    //     fetch('https://dev.to/api/articles?per_page=20&top=7')
-    //         .then(res => res.json())
-    //         .then(data => setBlogs(data))
-    // }, []);
 
-    // alternate of useEffect 
 
     const blogs = useLoaderData('https://dev.to/api/articles?per_page=20&top=7')
 
 
     // console.log(blogs);
     if (navigation.state === 'loading') return <Loader></Loader>
+    // console.log(<Loader></Loader>);
 
     return (
         <>
@@ -35,7 +29,7 @@ const Blogs = () => {
                     </a>
                     <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         {
-                            blogs.map(blog => <BlogCard blog={blog} key={blog.id}> </BlogCard>)
+                            blogs.slice(1, 19).map(blog => <BlogCard blog={blog} key={blog.id}> </BlogCard>)
                         }
                     </div>
                 </div>
